@@ -9,7 +9,7 @@ int main(void)
 {
 	char letter;
 
-	fochar letter = 'a';
+	 letter = 'a';
 
 while (letter <= 'z')
 {
