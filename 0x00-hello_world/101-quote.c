@@ -1,11 +1,21 @@
-#include <stdio.h
-#include <unustd.h>
+#include <stdio.h>
+#include <unistd.h>
+
 /**
- * main -A programme that prints followed by a new line to standard error
- * Return 1 (Success)
+ * main - Entry point
+ *
+ * Description: Prints "and that piece of art is useful" - Dora Korpar,
+ * 2015-10-19, followed by a new line, to the standard error
+ *
+ * Return: Always 1 (Error)
  */
+
 int main(void)
 {
-	fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
-	return (1);
+    char *quote = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+    write(2, quote, 59);
+
+    return (1);
 }
+
