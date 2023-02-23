@@ -1,19 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - Entry point
-*
-* Return: Always 0 (Success)
+* print_numbers - Prints the numbers from 0 to 9, followed by a new line
 */
-int main(void)
+void print_numbers(void)
 {
 int i;
 
 for (i = 0; i < 10; i++)
 {
-putchar(i + '0');
+_putchar(i + '0');
 }
-putchar('\n');
-return (0);
+_putchar('\n');
 }
 
