@@ -22,12 +22,12 @@ int main(void)
 }
 
 /**
- * _puts - Prints a string to stdout.
- * @str: The string to be printed.
- *
- * Description: function takes a string as input and prints it to the
- *              standard output, followed by a newline
- */
+* _puts - Prints a string to stdout.
+* @str: The string to be printed.
+*
+* Description: function takes a string as input and prints it to the
+*              standard output, followed by a newline
+*/
 void _puts(char *str)
 {
 
