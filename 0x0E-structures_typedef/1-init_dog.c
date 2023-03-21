@@ -16,13 +16,14 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 		return;
 
 	/* Initialize the struct fields */
-	d->name[0] = '\0';
+	d->name = name;
 	d->age = age;
-	d->owner[0] = '\0';
-
+	d->owner = owner;
+/*
 	if (name != NULL)
 		strncpy(d->name, name, sizeof(d->name) - 1);
 	if (owner != NULL)
 		strncpy(d->owner, owner, sizeof(d->owner) - 1);
+*/
 }
 
