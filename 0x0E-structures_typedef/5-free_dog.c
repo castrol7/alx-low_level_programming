@@ -1,20 +1,22 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
-* free_dog - Frees a dog_t struct
-* @d: Pointer to the dog_t struct to be freed
+* free_dog - frees a dog struct and its contents
+* @d: pointer to the dog struct to free
 *
-* Description: This function frees the memory allocated to a dog_t struct,
-*              including the memory allocated for the name field.
-* Return: Nothing
+* Return: void
 */
-
 void free_dog(dog_t *d)
 {
 if (d != NULL)
 {
 free(d->name);
+d->name = NULL;
+free(d->owner);
+d->owner = NULL;
+memset(d, 0, sizeof(dog_t));
 free(d);
 }
 }
