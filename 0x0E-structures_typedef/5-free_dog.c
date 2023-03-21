@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "dog.h"
 
 /**
 * free_dog - Frees a dog_t struct
