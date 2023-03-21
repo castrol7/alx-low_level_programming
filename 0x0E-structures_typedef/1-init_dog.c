@@ -1,6 +1,5 @@
 #ifndef INIT_DOG_H
 #define INIT_DOG_H
-
 #include <stdlib.h>
 #include <string.h>
 #include "dog.h"
