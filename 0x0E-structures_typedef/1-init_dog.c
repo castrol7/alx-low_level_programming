@@ -29,7 +29,5 @@ strcpy(d->owner, owner);
 /* Set the dog's age */
 d->age = age;
 }
-
-
 #endif /* INIT_DOG_H */
 
