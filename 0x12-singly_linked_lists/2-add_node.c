@@ -1,47 +1,35 @@
-#include <stdlib.h>
-#include <string.h>
-
+#include "lists.h"
 /**
-* struct list_s - singly linked list
-* @str: string - (malloc'ed string)
-* @len: length of the string
-* @next: points to the next node
+* add_node - Adds a new node at the beginning of a list_t list.
 *
-* Description: singly linked list node structure
+* @head: A pointer to a pointer to the head of the list.
+* @str: The string to be duplicated and added to the list.
+*
+* Return: The address of the new element, or NULL if it failed.
 */
-typedef struct list_s
-{
-char *str;
-unsigned int len;
-struct list_s *next;
-} list_t;
 
-/**
-* add_node - adds a new node at the beginning of a list_t list
-* @head: pointer to a pointer to the head of the list
-* @str: string to be added to the list
-*
-* Return: the address of the new element, or NULL if it failed
-*/
 list_t *add_node(list_t **head, const char *str)
 {
-list_t *new_node;
+	list_t *new_node;
 
-new_node = malloc(sizeof(list_t));
-if (new_node == NULL)
-return (NULL);
+	if (head == NULL || str == NULL)
+		return (NULL);
 
-new_node->str = strdup(str);
-if (new_node->str == NULL)
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
+		return (NULL);
+
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
 {
-free(new_node);
-return (NULL);
-}
+		free(new_node);
+		return (NULL);
+	}
 
-new_node->len = strlen(str);
-new_node->next = *head;
-*head = new_node;
+	new_node->len = strlen(str);
+	new_node->next = *head;
+	*head = new_node;
 
-return (new_node);
+	return (new_node);
 }
 
