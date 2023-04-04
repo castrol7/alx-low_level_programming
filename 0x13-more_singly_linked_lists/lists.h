@@ -37,6 +37,7 @@ struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
+listint_t *find_listint_loop(listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 listint_t *add_nodeint(listint_t **head, const int n);
