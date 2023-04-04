@@ -6,38 +6,38 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stddef.h>
-
 /**
- * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
- * @next: points to the next node
- *
- * Description: singly linked list node structure
- * for Holberton project
- */
+* struct list_s - singly linked list
+* @str: string - (malloc'ed string)
+* @len: length of the string
+* @next: points to the next node
+*
+* Description: singly linked list node structure
+* for Holberton project
+*/
 typedef struct list_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
+char *str;
+unsigned int len;
+struct list_s *next;
 } list_t;
 
 /**
- * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
- *
- * Description: singly linked list node structure
- * for Holberton project
- */
+* struct listint_s - singly linked list
+* @n: integer
+* @next: points to the next node
+*
+* Description: singly linked list node structure
+* for Holberton project
+*/
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+int n;
+struct listint_s *next;
 } listint_t;
 
 size_t print_listint(const listint_t *h);
+listint_t *reverse_listint(listint_t **head);
 listint_t *add_nodeint(listint_t **head, const int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
 listint_t *add_nodeint_end(listint_t **head, const int n);
