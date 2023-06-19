@@ -1,0 +1,8 @@
+#include "main.h"
+
+int _islower(int c)
+{
+    /* Implementation of _islower */
+    return 0;
+}
+
